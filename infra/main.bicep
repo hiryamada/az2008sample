@@ -1,6 +1,6 @@
 param location string = resourceGroup().location
-param planName string = 'plan{uniqueString(resourceGroup().id)}'
-param webAppName string = 'webapp{uniqueString(resourceGroup().id)}'
+param planName string = 'plan${uniqueString(resourceGroup().id)}'
+param webAppName string = 'webapp${uniqueString(resourceGroup().id)}'
 
 resource plan 'Microsoft.Web/serverfarms@2024-04-01' = {
   name: planName
