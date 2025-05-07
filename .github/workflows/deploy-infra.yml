@@ -21,8 +21,7 @@ jobs:
 
     - name: Deploy Bicep
       run: |
-        az deployment sub create \
+        az deployment group create \
+          --resource-group az2008samplerg \
           --location japaneast \
-          --template-file infra/main.bicep \
-          --parameters appName=myappservice123 \
-          --name infra-deploy
+          --template-file infra/main.bicep
