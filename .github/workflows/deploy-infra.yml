@@ -23,5 +23,4 @@ jobs:
       run: |
         az deployment group create \
           --resource-group az2008samplerg \
-          --location japaneast \
           --template-file infra/main.bicep
