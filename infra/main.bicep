@@ -12,7 +12,7 @@ resource plan 'Microsoft.Web/serverfarms@2024-04-01' = {
   }
 }
 
-resource app 'Microsoft.Web/sites@2024-04-01' = {
+resource webApp 'Microsoft.Web/sites@2024-04-01' = {
   name: webAppName
   location: location
   kind: 'app'
@@ -20,3 +20,5 @@ resource app 'Microsoft.Web/sites@2024-04-01' = {
     serverFarmId: plan.id
   }
 }
+
+output actualWebAppName string = webApp.name
